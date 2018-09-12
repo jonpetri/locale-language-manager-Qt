@@ -1,0 +1,2029 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Locale language manager class for QT + Demo: LlmQtLocaleLanguageManager Class Reference</title>
+
+<style>
+
+	
+/* The standard CSS for doxygen 1.8.11 */
+
+body, table, div, p, dl {
+	font: 400 14px/22px Roboto,sans-serif;
+}
+
+/* @group Heading Levels */
+
+h1.groupheader {
+	font-size: 150%;
+}
+
+.title {
+	font: 400 14px/28px Roboto,sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	margin: 10px 2px;
+}
+
+h2.groupheader {
+	border-bottom: 1px solid #879ECB;
+	color: #354C7B;
+	font-size: 150%;
+	font-weight: normal;
+	margin-top: 1.75em;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	width: 100%;
+}
+
+h3.groupheader {
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	-webkit-transition: text-shadow 0.5s linear;
+	-moz-transition: text-shadow 0.5s linear;
+	-ms-transition: text-shadow 0.5s linear;
+	-o-transition: text-shadow 0.5s linear;
+	transition: text-shadow 0.5s linear;
+	margin-right: 15px;
+}
+
+h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
+	text-shadow: 0 0 15px cyan;
+}
+
+dt {
+	font-weight: bold;
+}
+
+div.multicol {
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+}
+
+p.startli, p.startdd {
+	margin-top: 2px;
+}
+
+p.starttd {
+	margin-top: 0px;
+}
+
+p.endli {
+	margin-bottom: 0px;
+}
+
+p.enddd {
+	margin-bottom: 4px;
+}
+
+p.endtd {
+	margin-bottom: 2px;
+}
+
+/* @end */
+
+caption {
+	font-weight: bold;
+}
+
+span.legend {
+        font-size: 70%;
+        text-align: center;
+}
+
+h3.version {
+        font-size: 90%;
+        text-align: center;
+}
+
+div.qindex, div.navtab{
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
+	text-align: center;
+}
+
+div.qindex, div.navpath {
+	width: 100%;
+	line-height: 140%;
+}
+
+div.navtab {
+	margin-right: 15px;
+}
+
+/* @group Link Styling */
+
+a {
+	color: #3D578C;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.contents a:visited {
+	color: #4665A2;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.qindex {
+	font-weight: bold;
+}
+
+a.qindexHL {
+	font-weight: bold;
+	background-color: #9CAFD4;
+	color: #ffffff;
+	border: 1px double #869DCA;
+}
+
+.contents a.qindexHL:visited {
+        color: #ffffff;
+}
+
+a.el {
+	font-weight: bold;
+}
+
+a.elRef {
+}
+
+a.code, a.code:visited, a.line, a.line:visited {
+	color: #4665A2; 
+}
+
+a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
+	color: #4665A2; 
+}
+
+/* @end */
+
+dl.el {
+	margin-left: -1cm;
+}
+
+pre.fragment {
+        border: 1px solid #C4CFE5;
+        background-color: #FBFCFD;
+        padding: 4px 6px;
+        margin: 4px 8px 4px 2px;
+        overflow: auto;
+        word-wrap: break-word;
+        font-size:  9pt;
+        line-height: 125%;
+        font-family: monospace, fixed;
+        font-size: 105%;
+}
+
+div.fragment {
+        padding: 4px 6px;
+        margin: 4px 8px 4px 2px;
+	background-color: #FBFCFD;
+	border: 1px solid #C4CFE5;
+}
+
+div.line {
+	font-family: monospace, fixed;
+        font-size: 13px;
+	min-height: 13px;
+	line-height: 1.0;
+	text-wrap: unrestricted;
+	white-space: -moz-pre-wrap; /* Moz */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: pre-wrap;      /* CSS3  */
+	word-wrap: break-word;      /* IE 5.5+ */
+	text-indent: -53px;
+	padding-left: 53px;
+	padding-bottom: 0px;
+	margin: 0px;
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+}
+
+div.line:after {
+    content:"\000A";
+    white-space: pre;
+}
+
+div.line.glow {
+	background-color: cyan;
+	box-shadow: 0 0 10px cyan;
+}
+
+
+span.lineno {
+	padding-right: 4px;
+	text-align: right;
+	border-right: 2px solid #0F0;
+	background-color: #E8E8E8;
+        white-space: pre;
+}
+span.lineno a {
+	background-color: #D8D8D8;
+}
+
+span.lineno a:hover {
+	background-color: #C8C8C8;
+}
+
+div.ah, span.ah {
+	background-color: black;
+	font-weight: bold;
+	color: #ffffff;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	padding: 0.2em;
+	border: solid thin #333;
+	border-radius: 0.5em;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	box-shadow: 2px 2px 3px #999;
+	-webkit-box-shadow: 2px 2px 3px #999;
+	-moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#000),color-stop(0.3, #444));
+	background-image: -moz-linear-gradient(center top, #eee 0%, #444 40%, #000 110%);
+}
+
+div.classindex ul {
+        list-style: none;
+        padding-left: 0;
+}
+
+div.classindex span.ai {
+        display: inline-block;
+}
+
+div.groupHeader {
+	margin-left: 16px;
+	margin-top: 12px;
+	font-weight: bold;
+}
+
+div.groupText {
+	margin-left: 16px;
+	font-style: italic;
+}
+
+body {
+	background-color: white;
+	color: black;
+        margin: 0;
+}
+
+div.contents {
+	margin-top: 10px;
+	margin-left: 12px;
+	margin-right: 8px;
+}
+
+td.indexkey {
+	background-color: #EBEFF6;
+	font-weight: bold;
+	border: 1px solid #C4CFE5;
+	margin: 2px 0px 2px 0;
+	padding: 2px 10px;
+        white-space: nowrap;
+        vertical-align: top;
+}
+
+td.indexvalue {
+	background-color: #EBEFF6;
+	border: 1px solid #C4CFE5;
+	padding: 2px 10px;
+	margin: 2px 0px;
+}
+
+tr.memlist {
+	background-color: #EEF1F7;
+}
+
+p.formulaDsp {
+	text-align: center;
+}
+
+img.formulaDsp {
+	
+}
+
+img.formulaInl {
+	vertical-align: middle;
+}
+
+div.center {
+	text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+}
+
+div.center img {
+	border: 0px;
+}
+
+address.footer {
+	text-align: right;
+	padding-right: 12px;
+}
+
+img.footer {
+	border: 0px;
+	vertical-align: middle;
+}
+
+/* @group Code Colorization */
+
+span.keyword {
+	color: #008000
+}
+
+span.keywordtype {
+	color: #604020
+}
+
+span.keywordflow {
+	color: #e08000
+}
+
+span.comment {
+	color: #800000
+}
+
+span.preprocessor {
+	color: #806020
+}
+
+span.stringliteral {
+	color: #002080
+}
+
+span.charliteral {
+	color: #008080
+}
+
+span.vhdldigit { 
+	color: #ff00ff 
+}
+
+span.vhdlchar { 
+	color: #000000 
+}
+
+span.vhdlkeyword { 
+	color: #700070 
+}
+
+span.vhdllogic { 
+	color: #ff0000 
+}
+
+blockquote {
+        background-color: #F7F8FB;
+        border-left: 2px solid #9CAFD4;
+        margin: 0 24px 0 4px;
+        padding: 0 12px 0 16px;
+}
+
+/* @end */
+
+/*
+.search {
+	color: #003399;
+	font-weight: bold;
+}
+
+form.search {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+input.search {
+	font-size: 75%;
+	color: #000080;
+	font-weight: normal;
+	background-color: #e8eef2;
+}
+*/
+
+td.tiny {
+	font-size: 75%;
+}
+
+.dirtab {
+	padding: 4px;
+	border-collapse: collapse;
+	border: 1px solid #A3B4D7;
+}
+
+th.dirtab {
+	background: #EBEFF6;
+	font-weight: bold;
+}
+
+hr {
+	height: 0px;
+	border: none;
+	border-top: 1px solid #4A6AAA;
+}
+
+hr.footer {
+	height: 1px;
+}
+
+/* @group Member Descriptions */
+
+table.memberdecls {
+	border-spacing: 0px;
+	padding: 0px;
+}
+
+.memberdecls td, .fieldtable tr {
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+}
+
+.memberdecls td.glow, .fieldtable tr.glow {
+	background-color: cyan;
+	box-shadow: 0 0 15px cyan;
+}
+
+.mdescLeft, .mdescRight,
+.memItemLeft, .memItemRight,
+.memTemplItemLeft, .memTemplItemRight, .memTemplParams {
+	background-color: #F9FAFC;
+	border: none;
+	margin: 4px;
+	padding: 1px 0 0 8px;
+}
+
+.mdescLeft, .mdescRight {
+	padding: 0px 8px 4px 8px;
+	color: #555;
+}
+
+.memSeparator {
+        border-bottom: 1px solid #DEE4F0;
+        line-height: 1px;
+        margin: 0px;
+        padding: 0px;
+}
+
+.memItemLeft, .memTemplItemLeft {
+        white-space: nowrap;
+}
+
+.memItemRight {
+	width: 100%;
+}
+
+.memTemplParams {
+	color: #4665A2;
+        white-space: nowrap;
+	font-size: 80%;
+}
+
+/* @end */
+
+/* @group Member Details */
+
+/* Styles for detailed member documentation */
+
+.memtemplate {
+	font-size: 80%;
+	color: #4665A2;
+	font-weight: normal;
+	margin-left: 9px;
+}
+
+.memnav {
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
+	text-align: center;
+	margin: 2px;
+	margin-right: 15px;
+	padding: 2px;
+}
+
+.mempage {
+	width: 100%;
+}
+
+.memitem {
+	padding: 0;
+	margin-bottom: 10px;
+	margin-right: 5px;
+        -webkit-transition: box-shadow 0.5s linear;
+        -moz-transition: box-shadow 0.5s linear;
+        -ms-transition: box-shadow 0.5s linear;
+        -o-transition: box-shadow 0.5s linear;
+        transition: box-shadow 0.5s linear;
+        display: table !important;
+        width: 100%;
+}
+
+.memitem.glow {
+         box-shadow: 0 0 15px cyan;
+}
+
+.memname {
+        font-weight: bold;
+        margin-left: 6px;
+}
+
+.memname td {
+	vertical-align: bottom;
+}
+
+.memproto, dl.reflist dt {
+        border-top: 1px solid #A8B8D9;
+        border-left: 1px solid #A8B8D9;
+        border-right: 1px solid #A8B8D9;
+        padding: 6px 0px 6px 0px;
+        color: #253555;
+        font-weight: bold;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+        background-image:url('nav_f.png');
+        background-repeat:repeat-x;
+        background-color: #E2E8F2;
+        /* opera specific markup */
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        /* firefox specific markup */
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        -moz-border-radius-topright: 4px;
+        -moz-border-radius-topleft: 4px;
+        /* webkit specific markup */
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        -webkit-border-top-right-radius: 4px;
+        -webkit-border-top-left-radius: 4px;
+
+}
+
+.memdoc, dl.reflist dd {
+        border-bottom: 1px solid #A8B8D9;      
+        border-left: 1px solid #A8B8D9;      
+        border-right: 1px solid #A8B8D9; 
+        padding: 6px 10px 2px 10px;
+        background-color: #FBFCFD;
+        border-top-width: 0;
+        background-image:url('nav_g.png');
+        background-repeat:repeat-x;
+        background-color: #FFFFFF;
+        /* opera specific markup */
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        /* firefox specific markup */
+        -moz-border-radius-bottomleft: 4px;
+        -moz-border-radius-bottomright: 4px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        /* webkit specific markup */
+        -webkit-border-bottom-left-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+dl.reflist dt {
+        padding: 5px;
+}
+
+dl.reflist dd {
+        margin: 0px 0px 10px 0px;
+        padding: 5px;
+}
+
+.paramkey {
+	text-align: right;
+}
+
+.paramtype {
+	white-space: nowrap;
+}
+
+.paramname {
+	color: #602020;
+	white-space: nowrap;
+}
+.paramname em {
+	font-style: normal;
+}
+.paramname code {
+        line-height: 14px;
+}
+
+.params, .retval, .exception, .tparams {
+        margin-left: 0px;
+        padding-left: 0px;
+}       
+
+.params .paramname, .retval .paramname {
+        font-weight: bold;
+        vertical-align: top;
+}
+        
+.params .paramtype {
+        font-style: italic;
+        vertical-align: top;
+}       
+        
+.params .paramdir {
+        font-family: "courier new",courier,monospace;
+        vertical-align: top;
+}
+
+table.mlabels {
+	border-spacing: 0px;
+}
+
+td.mlabels-left {
+	width: 100%;
+	padding: 0px;
+}
+
+td.mlabels-right {
+	vertical-align: bottom;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+span.mlabels {
+        margin-left: 8px;
+}
+
+span.mlabel {
+        background-color: #728DC1;
+        border-top:1px solid #5373B4;
+        border-left:1px solid #5373B4;
+        border-right:1px solid #C4CFE5;
+        border-bottom:1px solid #C4CFE5;
+	text-shadow: none;
+	color: white;
+	margin-right: 4px;
+	padding: 2px 3px;
+	border-radius: 3px;
+	font-size: 7pt;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+
+
+/* @end */
+
+/* these are for tree view inside a (index) page */
+
+div.directory {
+        margin: 10px 0px;
+        border-top: 1px solid #9CAFD4;
+        border-bottom: 1px solid #9CAFD4;
+        width: 100%;
+}
+
+.directory table {
+        border-collapse:collapse;
+}
+
+.directory td {
+        margin: 0px;
+        padding: 0px;
+	vertical-align: top;
+}
+
+.directory td.entry {
+        white-space: nowrap;
+        padding-right: 6px;
+	padding-top: 3px;
+}
+
+.directory td.entry a {
+        outline:none;
+}
+
+.directory td.entry a img {
+        border: none;
+}
+
+.directory td.desc {
+        width: 100%;
+        padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+.directory tr.even {
+	padding-left: 6px;
+	background-color: #F7F8FB;
+}
+
+.directory img {
+	vertical-align: -30%;
+}
+
+.directory .levels {
+        white-space: nowrap;
+        width: 100%;
+        text-align: right;
+        font-size: 9pt;
+}
+
+.directory .levels span {
+        cursor: pointer;
+        padding-left: 2px;
+        padding-right: 2px;
+	color: #3D578C;
+}
+
+.arrow {
+    color: #9CAFD4;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 80%;
+    display: inline-block;
+    width: 16px;
+    height: 22px;
+}
+
+.icon {
+    font-family: Arial, Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    height: 14px;
+    width: 16px;
+    display: inline-block;
+    background-color: #728DC1;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.icona {
+    width: 24px;
+    height: 22px;
+    display: inline-block;
+}
+
+.iconfopen {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url('folderopen.png');
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+}
+
+.iconfclosed {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url('folderclosed.png');
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+}
+
+.icondoc {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url('doc.png');
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+}
+
+table.directory {
+    font: 400 14px Roboto,sans-serif;
+}
+
+/* @end */
+
+div.dynheader {
+        margin-top: 8px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+address {
+	font-style: normal;
+	color: #2A3D61;
+}
+
+table.doxtable caption {
+	caption-side: top;
+}
+
+table.doxtable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+}
+
+table.doxtable td, table.doxtable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+table.doxtable th {
+	background-color: #374F7F;
+	color: #FFFFFF;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+}
+
+table.fieldtable {
+        /*width: 100%;*/
+        margin-bottom: 10px;
+        border: 1px solid #A8B8D9;
+        border-spacing: 0px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+        -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.fieldtable td, .fieldtable th {
+        padding: 3px 7px 2px;
+}
+
+.fieldtable td.fieldtype, .fieldtable td.fieldname {
+        white-space: nowrap;
+        border-right: 1px solid #A8B8D9;
+        border-bottom: 1px solid #A8B8D9;
+        vertical-align: top;
+}
+
+.fieldtable td.fieldname {
+        padding-top: 3px;
+}
+
+.fieldtable td.fielddoc {
+        border-bottom: 1px solid #A8B8D9;
+        /*width: 100%;*/
+}
+
+.fieldtable td.fielddoc p:first-child {
+        margin-top: 0px;
+}       
+        
+.fieldtable td.fielddoc p:last-child {
+        margin-bottom: 2px;
+}
+
+.fieldtable tr:last-child td {
+        border-bottom: none;
+}
+
+.fieldtable th {
+        background-image:url('nav_f.png');
+        background-repeat:repeat-x;
+        background-color: #E2E8F2;
+        font-size: 90%;
+        color: #253555;
+        padding-bottom: 4px;
+        padding-top: 5px;
+        text-align:left;
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-top-left-radius: 4px;
+        -webkit-border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom: 1px solid #A8B8D9;
+}
+
+
+.tabsearch {
+	top: 0px;
+	left: 10px;
+	height: 36px;
+	background-image: url('tab_b.png');
+	z-index: 101;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+.navpath ul
+{
+	font-size: 11px;
+	background-image:url('tab_b.png');
+	background-repeat:repeat-x;
+	background-position: 0 -5px;
+	height:30px;
+	line-height:30px;
+	color:#8AA0CC;
+	border:solid 1px #C2CDE4;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+}
+
+.navpath li
+{
+	list-style-type:none;
+	float:left;
+	padding-left:10px;
+	padding-right:15px;
+	background-image:url('bc_s.png');
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#364D7C;
+}
+
+.navpath li.navelem a
+{
+	height:32px;
+	display:block;
+	text-decoration: none;
+	outline: none;
+	color: #283A5D;
+	font-family: 'Lucida Grande',Geneva,Helvetica,Arial,sans-serif;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+	text-decoration: none;        
+}
+
+.navpath li.navelem a:hover
+{
+	color:#6884BD;
+}
+
+.navpath li.footer
+{
+        list-style-type:none;
+        float:right;
+        padding-left:10px;
+        padding-right:15px;
+        background-image:none;
+        background-repeat:no-repeat;
+        background-position:right;
+        color:#364D7C;
+        font-size: 8pt;
+}
+
+
+div.summary
+{
+	float: right;
+	font-size: 8pt;
+	padding-right: 5px;
+	width: 50%;
+	text-align: right;
+}       
+
+div.summary a
+{
+	white-space: nowrap;
+}
+
+table.classindex
+{
+        margin: 10px;
+        white-space: nowrap;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 94%;
+        border: 0;
+        border-spacing: 0; 
+        padding: 0;
+}
+
+div.ingroups
+{
+	font-size: 8pt;
+	width: 50%;
+	text-align: left;
+}
+
+div.ingroups a
+{
+	white-space: nowrap;
+}
+
+div.header
+{
+        background-image:url('nav_h.png');
+        background-repeat:repeat-x;
+	background-color: #F9FAFC;
+	margin:  0px;
+	border-bottom: 1px solid #C4CFE5;
+}
+
+div.headertitle
+{
+	padding: 5px 5px 5px 10px;
+}
+
+dl
+{
+        padding: 0 0 0 10px;
+}
+
+/* dl.note, dl.warning, dl.attention, dl.pre, dl.post, dl.invariant, dl.deprecated, dl.todo, dl.test, dl.bug */
+dl.section
+{
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+dl.note
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #D0C000;
+}
+
+dl.warning, dl.attention
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #FF0000;
+}
+
+dl.pre, dl.post, dl.invariant
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #00D000;
+}
+
+dl.deprecated
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #505050;
+}
+
+dl.todo
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #00C0E0;
+}
+
+dl.test
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #3030E0;
+}
+
+dl.bug
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #C08050;
+}
+
+dl.section dd {
+	margin-bottom: 6px;
+}
+
+
+#projectlogo
+{
+	text-align: center;
+	vertical-align: bottom;
+	border-collapse: separate;
+}
+ 
+#projectlogo img
+{ 
+	border: 0px none;
+}
+ 
+#projectalign
+{
+        vertical-align: middle;
+}
+
+#projectname
+{
+	font: 300% Tahoma, Arial,sans-serif;
+	margin: 0px;
+	padding: 2px 0px;
+}
+    
+#projectbrief
+{
+	font: 120% Tahoma, Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#projectnumber
+{
+	font: 50% Tahoma, Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#titlearea
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	border-bottom: 1px solid #5373B4;
+}
+
+.image
+{
+        text-align: center;
+}
+
+.dotgraph
+{
+        text-align: center;
+}
+
+.mscgraph
+{
+        text-align: center;
+}
+
+.diagraph
+{
+        text-align: center;
+}
+
+.caption
+{
+	font-weight: bold;
+}
+
+div.zoom
+{
+	border: 1px solid #90A5CE;
+}
+
+dl.citelist {
+        margin-bottom:50px;
+}
+
+dl.citelist dt {
+        color:#334975;
+        float:left;
+        font-weight:bold;
+        margin-right:10px;
+        padding:5px;
+}
+
+dl.citelist dd {
+        margin:2px 0;
+        padding:5px 0;
+}
+
+div.toc {
+        padding: 14px 25px;
+        background-color: #F4F6FA;
+        border: 1px solid #D8DFEE;
+        border-radius: 7px 7px 7px 7px;
+        float: right;
+        height: auto;
+        margin: 0 8px 10px 10px;
+        width: 200px;
+}
+
+div.toc li {
+        background: url("bdwn.png") no-repeat scroll 0 5px transparent;
+        font: 10px/1.2 Verdana,DejaVu Sans,Geneva,sans-serif;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-top: 2px;
+}
+
+div.toc h3 {
+        font: bold 12px/1.2 Arial,FreeSans,sans-serif;
+	color: #4665A2;
+        border-bottom: 0 none;
+        margin: 0;
+}
+
+div.toc ul {
+        list-style: none outside none;
+        border: medium none;
+        padding: 0px;
+}       
+
+div.toc li.level1 {
+        margin-left: 0px;
+}
+
+div.toc li.level2 {
+        margin-left: 15px;
+}
+
+div.toc li.level3 {
+        margin-left: 30px;
+}
+
+div.toc li.level4 {
+        margin-left: 45px;
+}
+
+.inherit_header {
+        font-weight: bold;
+        color: gray;
+        cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.inherit_header td {
+        padding: 6px 0px 2px 5px;
+}
+
+.inherit {
+        display: none;
+}
+
+tr.heading h2 {
+        margin-top: 12px;
+        margin-bottom: 4px;
+}
+
+/* tooltip related style info */
+
+.ttc {
+        position: absolute;
+        display: none;
+}
+
+#powerTip {
+	cursor: default;
+	white-space: nowrap;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 1px 1px 7px gray;
+	display: none;
+	font-size: smaller;
+	max-width: 80%;
+	opacity: 0.9;
+	padding: 1ex 1em 1em;
+	position: absolute;
+	z-index: 2147483647;
+}
+
+#powerTip div.ttdoc {
+        color: grey;
+	font-style: italic;
+}
+
+#powerTip div.ttname a {
+        font-weight: bold;
+}
+
+#powerTip div.ttname {
+        font-weight: bold;
+}
+
+#powerTip div.ttdeci {
+        color: #006318;
+}
+
+#powerTip div {
+        margin: 0px;
+        padding: 0px;
+        font: 12px/16px Roboto,sans-serif;
+}
+
+#powerTip:before, #powerTip:after {
+	content: "";
+	position: absolute;
+	margin: 0px;
+}
+
+#powerTip.n:after,  #powerTip.n:before,
+#powerTip.s:after,  #powerTip.s:before,
+#powerTip.w:after,  #powerTip.w:before,
+#powerTip.e:after,  #powerTip.e:before,
+#powerTip.ne:after, #powerTip.ne:before,
+#powerTip.se:after, #powerTip.se:before,
+#powerTip.nw:after, #powerTip.nw:before,
+#powerTip.sw:after, #powerTip.sw:before {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+
+#powerTip.n:after,  #powerTip.s:after,
+#powerTip.w:after,  #powerTip.e:after,
+#powerTip.nw:after, #powerTip.ne:after,
+#powerTip.sw:after, #powerTip.se:after {
+	border-color: rgba(255, 255, 255, 0);
+}
+
+#powerTip.n:before,  #powerTip.s:before,
+#powerTip.w:before,  #powerTip.e:before,
+#powerTip.nw:before, #powerTip.ne:before,
+#powerTip.sw:before, #powerTip.se:before {
+	border-color: rgba(128, 128, 128, 0);
+}
+
+#powerTip.n:after,  #powerTip.n:before,
+#powerTip.ne:after, #powerTip.ne:before,
+#powerTip.nw:after, #powerTip.nw:before {
+	top: 100%;
+}
+
+#powerTip.n:after, #powerTip.ne:after, #powerTip.nw:after {
+	border-top-color: #ffffff;
+	border-width: 10px;
+	margin: 0px -10px;
+}
+#powerTip.n:before {
+	border-top-color: #808080;
+	border-width: 11px;
+	margin: 0px -11px;
+}
+#powerTip.n:after, #powerTip.n:before {
+	left: 50%;
+}
+
+#powerTip.nw:after, #powerTip.nw:before {
+	right: 14px;
+}
+
+#powerTip.ne:after, #powerTip.ne:before {
+	left: 14px;
+}
+
+#powerTip.s:after,  #powerTip.s:before,
+#powerTip.se:after, #powerTip.se:before,
+#powerTip.sw:after, #powerTip.sw:before {
+	bottom: 100%;
+}
+
+#powerTip.s:after, #powerTip.se:after, #powerTip.sw:after {
+	border-bottom-color: #ffffff;
+	border-width: 10px;
+	margin: 0px -10px;
+}
+
+#powerTip.s:before, #powerTip.se:before, #powerTip.sw:before {
+	border-bottom-color: #808080;
+	border-width: 11px;
+	margin: 0px -11px;
+}
+
+#powerTip.s:after, #powerTip.s:before {
+	left: 50%;
+}
+
+#powerTip.sw:after, #powerTip.sw:before {
+	right: 14px;
+}
+
+#powerTip.se:after, #powerTip.se:before {
+	left: 14px;
+}
+
+#powerTip.e:after, #powerTip.e:before {
+	left: 100%;
+}
+#powerTip.e:after {
+	border-left-color: #ffffff;
+	border-width: 10px;
+	top: 50%;
+	margin-top: -10px;
+}
+#powerTip.e:before {
+	border-left-color: #808080;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+#powerTip.w:after, #powerTip.w:before {
+	right: 100%;
+}
+#powerTip.w:after {
+	border-right-color: #ffffff;
+	border-width: 10px;
+	top: 50%;
+	margin-top: -10px;
+}
+#powerTip.w:before {
+	border-right-color: #808080;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+@media print
+{
+  #top { display: none; }
+  #side-nav { display: none; }
+  #nav-path { display: none; }
+  body { overflow:visible; }
+  h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
+  .summary { display: none; }
+  .memitem { page-break-inside: avoid; }
+  #doc-content
+  {
+    margin-left:0 !important;
+    height:auto !important;
+    width:auto !important;
+    overflow:inherit;
+    display:inline;
+  }
+}
+
+	
+</style>
+	
+</head>
+<body>
+	
+	
+<div class="header">
+
+  <div class="headertitle">
+<div class="title">LlmQtLocaleLanguageManager Class Reference</div>  </div>
+</div><!--header-->
+	
+<div class="contents">
+
+<p><a class="el" href="LlmQtLocaleLanguageManager.html" title="LlmQtLocaleLanguageManager is an utilitarian class that simplifies language choice management in a mu...">LlmQtLocaleLanguageManager</a> is an utilitarian class that simplifies language choice management in a multilingual Qt application.  
+ <a href="LlmQtLocaleLanguageManager.html#details">More...</a></p>
+
+<p><code>#include &lt;LlmQtLocaleLanguageManager.h&gt;</code></p>
+	
+
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af7a326c16483b8729d057f51e560dae7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#af7a326c16483b8729d057f51e560dae7">analyseAvailableLanguages</a> (QString *sReturnErrMsg=nullptr)</td></tr>
+<tr class="memdesc:af7a326c16483b8729d057f51e560dae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyse which are the available languages/translations for the application.  <a href="#af7a326c16483b8729d057f51e560dae7">More...</a><br /></td></tr>
+<tr class="separator:af7a326c16483b8729d057f51e560dae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48add445f3a2fba117d233caa361eb2d"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a48add445f3a2fba117d233caa361eb2d">currentLanguageNativeName</a> ()</td></tr>
+<tr class="memdesc:a48add445f3a2fba117d233caa361eb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the current language, in native form.  <a href="#a48add445f3a2fba117d233caa361eb2d">More...</a><br /></td></tr>
+<tr class="separator:a48add445f3a2fba117d233caa361eb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac4d52f781caa0d067aac21b8f0c9cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a7ac4d52f781caa0d067aac21b8f0c9cb">isSystemLanguageAvailable</a> ()</td></tr>
+<tr class="memdesc:a7ac4d52f781caa0d067aac21b8f0c9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate if one of the system languages is available among the qm files.  <a href="#a7ac4d52f781caa0d067aac21b8f0c9cb">More...</a><br /></td></tr>
+<tr class="separator:a7ac4d52f781caa0d067aac21b8f0c9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0576cd70e9bdabe01a33ec25cb566b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#acd0576cd70e9bdabe01a33ec25cb566b">isSystemLanguageChosenByUser</a> ()</td></tr>
+<tr class="memdesc:acd0576cd70e9bdabe01a33ec25cb566b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate if the Language choice is "System language".  <a href="#acd0576cd70e9bdabe01a33ec25cb566b">More...</a><br /></td></tr>
+<tr class="separator:acd0576cd70e9bdabe01a33ec25cb566b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18e7ffe232b8c80fb771cd13da5bdc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#ad18e7ffe232b8c80fb771cd13da5bdc1">isUsable</a> ()</td></tr>
+<tr class="memdesc:ad18e7ffe232b8c80fb771cd13da5bdc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate if the class is usable.  <a href="#ad18e7ffe232b8c80fb771cd13da5bdc1">More...</a><br /></td></tr>
+<tr class="separator:ad18e7ffe232b8c80fb771cd13da5bdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea070d3e4e19e423d78a8009d3f6ed6"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#aeea070d3e4e19e423d78a8009d3f6ed6">languageNameNativeList</a> (bool bIntegrateSystemLanguageFlag)</td></tr>
+<tr class="memdesc:aeea070d3e4e19e423d78a8009d3f6ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the available languages, in native form.  <a href="#aeea070d3e4e19e423d78a8009d3f6ed6">More...</a><br /></td></tr>
+<tr class="separator:aeea070d3e4e19e423d78a8009d3f6ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8cb2a733eb488f0f5f31595ae561f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c8cb2a733eb488f0f5f31595ae561f8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LlmQtLocaleLanguageManager</b> (const <a class="el" href="LlmQtLocaleLanguageManager.html">LlmQtLocaleLanguageManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a2c8cb2a733eb488f0f5f31595ae561f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4175677070d9d8728e9e1d9798470a3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4175677070d9d8728e9e1d9798470a3a"></a>
+<a class="el" href="LlmQtLocaleLanguageManager.html">LlmQtLocaleLanguageManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="LlmQtLocaleLanguageManager.html">LlmQtLocaleLanguageManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a4175677070d9d8728e9e1d9798470a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6715c4587d111a7f8a3e5923be7353a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a6715c4587d111a7f8a3e5923be7353a2">setKeySettingsTranslateLanguage</a> (const QString &amp;sKey)</td></tr>
+<tr class="memdesc:a6715c4587d111a7f8a3e5923be7353a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify the key to access "Locale-language" value in user's settings.  <a href="#a6715c4587d111a7f8a3e5923be7353a2">More...</a><br /></td></tr>
+<tr class="separator:a6715c4587d111a7f8a3e5923be7353a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe15c49c3f8b6a97b0fe22e16ac5222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a0fe15c49c3f8b6a97b0fe22e16ac5222">setQmFilesDirectory</a> (const QString &amp;sQmFilesDirectory)</td></tr>
+<tr class="memdesc:a0fe15c49c3f8b6a97b0fe22e16ac5222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set qm files directory.  <a href="#a0fe15c49c3f8b6a97b0fe22e16ac5222">More...</a><br /></td></tr>
+<tr class="separator:a0fe15c49c3f8b6a97b0fe22e16ac5222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4170c8af2a1f96f376ebe2c3c3a7a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a1f4170c8af2a1f96f376ebe2c3c3a7a7">setSettings</a> (const std::shared_ptr&lt; QSettings &gt; &amp;settings)</td></tr>
+<tr class="memdesc:a1f4170c8af2a1f96f376ebe2c3c3a7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a user QSettings object to the language manager class (Use of that feature is optional).  <a href="#a1f4170c8af2a1f96f376ebe2c3c3a7a7">More...</a><br /></td></tr>
+<tr class="separator:a1f4170c8af2a1f96f376ebe2c3c3a7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf737b16d86e340a73ff8b597ffd93f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#abf737b16d86e340a73ff8b597ffd93f4">setSourceLanguage</a> (QLocale::Language languageQtFlag, QLocale::Country countryQtFlag=QLocale::AnyCountry, QString *sReturnErrMsg=nullptr)</td></tr>
+<tr class="memdesc:abf737b16d86e340a73ff8b597ffd93f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the source's/primary languages informations.  <a href="#abf737b16d86e340a73ff8b597ffd93f4">More...</a><br /></td></tr>
+<tr class="separator:abf737b16d86e340a73ff8b597ffd93f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1430c10683aec467418bbadcb7c86d4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a1430c10683aec467418bbadcb7c86d4b">setSourceLanguageFromQAppLocalSettings</a> ()</td></tr>
+<tr class="memdesc:a1430c10683aec467418bbadcb7c86d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guess source's interface language, from the default QLocal's values.  <a href="#a1430c10683aec467418bbadcb7c86d4b">More...</a><br /></td></tr>
+<tr class="separator:a1430c10683aec467418bbadcb7c86d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a0e49f77880d5455553ce3913715efa"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a1a0e49f77880d5455553ce3913715efa">sourceLanguageNativeName</a> ()</td></tr>
+<tr class="memdesc:a1a0e49f77880d5455553ce3913715efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The native name of the interface (dialog panels) language used in sources.  <a href="#a1a0e49f77880d5455553ce3913715efa">More...</a><br /></td></tr>
+<tr class="separator:a1a0e49f77880d5455553ce3913715efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab6919ebfdc52705e7770c9e9b7e1cd"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#afab6919ebfdc52705e7770c9e9b7e1cd">systemLanguageNativeName</a> ()</td></tr>
+<tr class="memdesc:afab6919ebfdc52705e7770c9e9b7e1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the available system language name, in this native form (available among qm files).  <a href="#afab6919ebfdc52705e7770c9e9b7e1cd">More...</a><br /></td></tr>
+<tr class="separator:afab6919ebfdc52705e7770c9e9b7e1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa39480c6ded16e0647bd4e59b1b4254"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#afa39480c6ded16e0647bd4e59b1b4254">translateAppToLanguage</a> (const QString &amp;sLanguageNativeOrEnglishNameWithCountry, QString *sReturnErrMsg=nullptr)</td></tr>
+<tr class="memdesc:afa39480c6ded16e0647bd4e59b1b4254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate the application to the the chosen language.  <a href="#afa39480c6ded16e0647bd4e59b1b4254">More...</a><br /></td></tr>
+<tr class="separator:afa39480c6ded16e0647bd4e59b1b4254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f9e539968a0c4983a474fd261274a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#aa7f9e539968a0c4983a474fd261274a4">translateAppToSystemLanguage</a> (QString *sReturnErrMsg=nullptr)</td></tr>
+<tr class="memdesc:aa7f9e539968a0c4983a474fd261274a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate the application to an available system language.  <a href="#aa7f9e539968a0c4983a474fd261274a4">More...</a><br /></td></tr>
+<tr class="separator:aa7f9e539968a0c4983a474fd261274a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e98e8ee148da258cd554a8302f864b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LlmQtLocaleLanguageManager.html#a54e98e8ee148da258cd554a8302f864b">translateAppToUserSettingsLanguage</a> (QString *sReturnErrMsg=nullptr)</td></tr>
+<tr class="memdesc:a54e98e8ee148da258cd554a8302f864b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate the application to the language indicated in the settings m_settings, under the language key.  <a href="#a54e98e8ee148da258cd554a8302f864b">More...</a><br /></td></tr>
+<tr class="separator:a54e98e8ee148da258cd554a8302f864b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="LlmQtLocaleLanguageManager.html" title="LlmQtLocaleLanguageManager is an utilitarian class that simplifies language choice management in a mu...">LlmQtLocaleLanguageManager</a> is an utilitarian class that simplifies language choice management in a multilingual Qt application. </p>
+<p>It provide methods to deal with .qm files, app's active language, system language, language switch, choice storing in user settings... It handle all the possible error during .qm files analysis. Dialog's straight translation at running time is possible.</p>
+<p>How to use explanations and use examples are in main folder's README.md .</p>
+<dl class="section author"><dt>Author</dt><dd>Jon Petrissans </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af7a326c16483b8729d057f51e560dae7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::analyseAvailableLanguages </td>
+          <td>(</td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>sReturnErrMsg</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Analyse which are the available languages/translations for the application. </p>
+<p>The analysis is done according the .qm files found under m_qmFilesDirectory. <a class="el" href="LlmQtLocaleLanguageManager.html#a0fe15c49c3f8b6a97b0fe22e16ac5222" title="Set qm files directory. ">LlmQtLocaleLanguageManager::setQmFilesDirectory()</a> has to be called before. If .qm file is added/removed during running time, this method update the analysis.</p>
+<p>Also, it look to the system languages, and if our app is translatable to a system language, that language is stored in m_systemLanguage.</p>
+<p>In case of error, the method has 2 behaviours:</p><ul>
+<li>if sReturnErrMsg is used sReturnErrMsg return error's description, there is no exception throw.</li>
+<li>if sReturnErrMsg is not used, the method throws an exception.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">sReturnErrMsg</td><td>Description of error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if analysis is a success </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">runtime_error</td><td>Exceptions are raised only if sReturnErrMsg is not used. Throws an exception if:<ul>
+<li>qmFilesDirectory doesn't exist.</li>
+<li>No qm file found.</li>
+<li>LlmQtLocaleLanguageManager::languagePropertiesOfQmFile() throws an exception. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a48add445f3a2fba117d233caa361eb2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LlmQtLocaleLanguageManager::currentLanguageNativeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the name of the current language, in native form. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the current language, in native form </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ac4d52f781caa0d067aac21b8f0c9cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::isSystemLanguageAvailable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicate if one of the system languages is available among the qm files. </p>
+<p>An analysis need to be done before calling this method, with <a class="el" href="LlmQtLocaleLanguageManager.html#af7a326c16483b8729d057f51e560dae7" title="Analyse which are the available languages/translations for the application. ">LlmQtLocaleLanguageManager::analyseAvailableLanguages()</a>. </p><dl class="section return"><dt>Returns</dt><dd>True if one of the system languages is available. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd0576cd70e9bdabe01a33ec25cb566b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::isSystemLanguageChosenByUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicate if the Language choice is "System language". </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the Language choice is "System language" </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad18e7ffe232b8c80fb771cd13da5bdc1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::isUsable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicate if the class is usable. </p>
+<p>= qm files available + source language known. </p><dl class="section return"><dt>Returns</dt><dd>True if <a class="el" href="LlmQtLocaleLanguageManager.html" title="LlmQtLocaleLanguageManager is an utilitarian class that simplifies language choice management in a mu...">LlmQtLocaleLanguageManager</a> is usable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeea070d3e4e19e423d78a8009d3f6ed6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList LlmQtLocaleLanguageManager::languageNameNativeList </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bIntegrateSystemLanguageFlag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of the available languages, in native form. </p>
+<p>The list include the source language, and a SYSTEM flag if asked (and if the system language's translation is available). If a language has a country specification, the language name will be: "language name (Country code)". </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bIntegrateSystemLanguageFlag</td><td>Indicate if a SYSTEM flag is needed in the returned list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of the available languages. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6715c4587d111a7f8a3e5923be7353a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LlmQtLocaleLanguageManager::setKeySettingsTranslateLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>sKey</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modify the key to access "Locale-language" value in user's settings. </p>
+<p>If not set, the default key is "Locale/Language" </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sKey</td><td>The new key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0fe15c49c3f8b6a97b0fe22e16ac5222"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LlmQtLocaleLanguageManager::setQmFilesDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>sQmFilesDirectory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set qm files directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sQmFilesDirectory</td><td>Full path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1f4170c8af2a1f96f376ebe2c3c3a7a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LlmQtLocaleLanguageManager::setSettings </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; QSettings &gt; &amp;&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a user QSettings object to the language manager class (Use of that feature is optional). </p>
+<p>If set, that QSettings object will be used to store the chosen languages. If not set, the language changes are just not saved, without any warning. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">settings</td><td>Settings object to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abf737b16d86e340a73ff8b597ffd93f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::setSourceLanguage </td>
+          <td>(</td>
+          <td class="paramtype">QLocale::Language&#160;</td>
+          <td class="paramname"><em>languageQtFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QLocale::Country&#160;</td>
+          <td class="paramname"><em>countryQtFlag</em> = <code>QLocale::AnyCountry</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>sReturnErrMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the source's/primary languages informations. </p>
+<p>The method is an alternative to <a class="el" href="LlmQtLocaleLanguageManager.html#a1430c10683aec467418bbadcb7c86d4b" title="Guess source&#39;s interface language, from the default QLocal&#39;s values. ">LlmQtLocaleLanguageManager::setSourceLanguageFromQAppLocalSettings()</a>, and is a better solution. This method is more "precise", and has to be privileged. It permit to set countryQtFlag to QLocale::AnyCountry. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">languageQtFlag</td><td>Languages Qt flag, from the QLocale::Language enum </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">countryQtFlag</td><td>Country Qt flag, from the QLocale::Country enum </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sReturnErrMsg</td><td>description of error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if success </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">runtime_error</td><td>Exceptions are raised only if sReturnErrMsg is not used. Throws an exception if the language/country couple is not compatible. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1430c10683aec467418bbadcb7c86d4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LlmQtLocaleLanguageManager::setSourceLanguageFromQAppLocalSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Guess source's interface language, from the default QLocal's values. </p>
+<p>The method is an alternative to <a class="el" href="LlmQtLocaleLanguageManager.html#abf737b16d86e340a73ff8b597ffd93f4" title="Set the source&#39;s/primary languages informations. ">LlmQtLocaleLanguageManager::setSourceLanguage()</a>, but prefer use <a class="el" href="LlmQtLocaleLanguageManager.html#abf737b16d86e340a73ff8b597ffd93f4" title="Set the source&#39;s/primary languages informations. ">LlmQtLocaleLanguageManager::setSourceLanguage()</a> instead of that one. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1a0e49f77880d5455553ce3913715efa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LlmQtLocaleLanguageManager::sourceLanguageNativeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The native name of the interface (dialog panels) language used in sources. </p>
+<dl class="section return"><dt>Returns</dt><dd>the native name of the source/primary interface language. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afab6919ebfdc52705e7770c9e9b7e1cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString LlmQtLocaleLanguageManager::systemLanguageNativeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the name of the available system language name, in this native form (available among qm files). </p>
+<p>An analysis need to be done before calling this method, with <a class="el" href="LlmQtLocaleLanguageManager.html#af7a326c16483b8729d057f51e560dae7" title="Analyse which are the available languages/translations for the application. ">LlmQtLocaleLanguageManager::analyseAvailableLanguages()</a>. </p><dl class="section return"><dt>Returns</dt><dd>The name of the available system language name, in this native form </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa39480c6ded16e0647bd4e59b1b4254"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::translateAppToLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>sLanguageNativeOrEnglishNameWithCountry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>sReturnErrMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Translate the application to the the chosen language. </p>
+<p>The default QLocale is also modified according the new language. The language name can be either in it's Native form or in it's English form (Français or French), it doesn't matter. It can contain the country code in brackets. (as given by <a class="el" href="LlmQtLocaleLanguageManager.html#aeea070d3e4e19e423d78a8009d3f6ed6" title="List of the available languages, in native form. ">LlmQtLocaleLanguageManager::languageNameNativeList()</a>).</p>
+<p>If a QSetting has been set, (thanks to <a class="el" href="LlmQtLocaleLanguageManager.html#a1f4170c8af2a1f96f376ebe2c3c3a7a7" title="Set a user QSettings object to the language manager class (Use of that feature is optional)...">LlmQtLocaleLanguageManager::setSettings()</a> ), saves the changes in user's settings.</p>
+<p>In case of error, the method has 2 behaviours:</p><ul>
+<li>if sReturnErrMsg is used sReturnErrMsg return error's description, there is no exception throw</li>
+<li>if sReturnErrMsg is not used, the method throws an exception</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sLanguageNativeOrEnglishNameWithCountry</td><td>The wanted language name in this Native form or in this English form (Français or French). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sReturnErrMsg</td><td>description of error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True is success </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">runtime_error</td><td>Exceptions are raised only if sReturnErrMsg is not used. Throws an exception if:<ul>
+<li>System language is asked and not available. (Use <a class="el" href="LlmQtLocaleLanguageManager.html#a7ac4d52f781caa0d067aac21b8f0c9cb" title="Indicate if one of the system languages is available among the qm files. ">LlmQtLocaleLanguageManager::isSystemLanguageAvailable()</a> to have that information).</li>
+<li>Qm file load error.</li>
+<li>Qm file of the asked language doesn't exist. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa7f9e539968a0c4983a474fd261274a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::translateAppToSystemLanguage </td>
+          <td>(</td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>sReturnErrMsg</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Translate the application to an available system language. </p>
+<p>(Available among the qm files) Before using that method, make sure a system language translation is available thanks <a class="el" href="LlmQtLocaleLanguageManager.html#a7ac4d52f781caa0d067aac21b8f0c9cb" title="Indicate if one of the system languages is available among the qm files. ">LlmQtLocaleLanguageManager::isSystemLanguageAvailable()</a>. If a QSetting has been set, (thanks to <a class="el" href="LlmQtLocaleLanguageManager.html#a1f4170c8af2a1f96f376ebe2c3c3a7a7" title="Set a user QSettings object to the language manager class (Use of that feature is optional)...">LlmQtLocaleLanguageManager::setSettings()</a> ), saves the changes in user's settings.</p>
+<p>In case of error, the method has 2 behaviours:</p><ul>
+<li>if sReturnErrMsg is used sReturnErrMsg return error's description, there is no exception throw.</li>
+<li>if sReturnErrMsg is not used, the method throws an exception. <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">sReturnErrMsg</td><td>description of error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if success </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">runtime_error</td><td>Exceptions are raised only if sReturnErrMsg is not used. Throws an exception if :<ul>
+<li>The translation to the system language is not available. System language availability can be checked with LlmQtLocaleLanguageManager::isSystemLanguageChosen()</li>
+<li><a class="el" href="LlmQtLocaleLanguageManager.html#afa39480c6ded16e0647bd4e59b1b4254" title="Translate the application to the the chosen language. ">LlmQtLocaleLanguageManager::translateAppToLanguage</a> throws an exception </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="a54e98e8ee148da258cd554a8302f864b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LlmQtLocaleLanguageManager::translateAppToUserSettingsLanguage </td>
+          <td>(</td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>sReturnErrMsg</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Translate the application to the language indicated in the settings m_settings, under the language key. </p>
+<p>The key is indicated thanks to <a class="el" href="LlmQtLocaleLanguageManager.html#a6715c4587d111a7f8a3e5923be7353a2" title="Modify the key to access &quot;Locale-language&quot; value in user&#39;s settings. ">LlmQtLocaleLanguageManager::setKeySettingsTranslateLanguage()</a>. A QSetting has to be set first, thanks to <a class="el" href="LlmQtLocaleLanguageManager.html#a1f4170c8af2a1f96f376ebe2c3c3a7a7" title="Set a user QSettings object to the language manager class (Use of that feature is optional)...">LlmQtLocaleLanguageManager::setSettings()</a>.</p>
+<p>In case of error, the method has 2 behaviours:</p><ul>
+<li>if sReturnErrMsg is used sReturnErrMsg return error's description, there is no exception throw</li>
+<li>if sReturnErrMsg is not used, the method throws an exception <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">sReturnErrMsg</td><td>description of error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if success </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">runtime_error</td><td>Exceptions are raised only if sReturnErrMsg is not used. Throws an exception if:</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li><a class="el" href="LlmQtLocaleLanguageManager.html#afa39480c6ded16e0647bd4e59b1b4254" title="Translate the application to the the chosen language. ">LlmQtLocaleLanguageManager::translateAppToLanguage()</a> throws an exception.</li>
+<li>QSetting has not been set. </li>
+</ul>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>LlmQtLocaleLanguageManager.h</li>
+<li>LlmQtLocaleLanguageManager.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
