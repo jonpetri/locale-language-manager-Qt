@@ -16,7 +16,7 @@ if (Doxygen_FOUND)
 
         # Two docs are generated
 
-        # 1- Doc of all teh demo project
+        # 1- Doc of all the demo project
         add_subdirectory(codeDemo)
 
         # 2- Doc of the LlmQtLocaleLanguageManager class only, for github's wiki

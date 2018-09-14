@@ -6,13 +6,15 @@
 set(sDoxygenSettingsFileIn ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
 set(sDoxygenSettingsFileOut ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
 
-# Definition of output directory, in sDoxygenSettingsFileOut, thanks to the command configure_file()
-#   Compute the relative path from a <directory> to a <file> and store it in the <variable>.
+
+# Compute the relative path from a <CMAKE_SOURCE_DIR> to a <CMAKE_CURRENT_SOURCE_DIR> and store it in the <variable>.
 file(RELATIVE_PATH sRelativeLocation "${CMAKE_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}")
 
-set(sDoxygenTag_OutputDir ${sOutputDir}/${sRelativeLocation} )
-set(sDoxygenTag_Input "${sExeSourceDir} ${CMAKE_SOURCE_DIR}/README.md")
-set(sDoxygenTag_ImagePath "${CMAKE_SOURCE_DIR}/data/images/")
+set(sDoxygenTag_OutputDir       "${sOutputDir}/${sRelativeLocation}" )
+set(sDoxygenTag_Input           "${sExeSourceDir} ${CMAKE_SOURCE_DIR}/README.md")
+set(sDoxygenTag_ImagePath       "${CMAKE_SOURCE_DIR}/data/images/")
+set(sDoxygenTag_ProjectName     "\"Locale language manager class for QT, in a demo project\"")
+set(sDoxygenTag_ProjectBrief    "\"Language management in a multilingual Qt application made easier.\"")
 
 # configure Doxyfile.in with the variables sDoxygenTag_*
 configure_file(${sDoxygenSettingsFileIn} ${sDoxygenSettingsFileOut} @ONLY)
