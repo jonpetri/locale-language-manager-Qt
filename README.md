@@ -54,7 +54,9 @@ LlmQtLocaleLanguageManager is an utilitarian class that simplifies language choi
 # Code documentation
 
 --------
-Class's Doxygen documentation is [here](/doc/LlmQtLocaleLanguageManager.html), under [/doc/](/doc/).
+Class's Doxygen documentation is [here](https://jonpetri.github.io/locale-language-manager-Qt/class_llm_qt_locale_language_manager.html).
+<br><br>
+If you want the code documentation of all the demo project, just build the cmake project in your computer.
 
 
 
@@ -64,7 +66,7 @@ Class's Doxygen documentation is [here](/doc/LlmQtLocaleLanguageManager.html), u
 --------
 > **Prerequisites :** C++11 (for a smart pointer), Qt5 framework, Qt5LinguistTools
 
-1. Copy the 4 files in [/src/localeLanguageManager/](/src/localeLanguageManager/) somewhere in your project. (LlmQtLocaleLanguageManager.h  LlmQtLocaleLanguageManager.cpp  LlmQtLanguage.h  LlmQtLanguage.cpp)
+1. Copy the 4 files in [/src/localeLanguageManager/](https://github.com/jonpetri/locale-language-manager-Qt/tree/master/src/localeLanguageManager) somewhere in your project. (LlmQtLocaleLanguageManager.h  LlmQtLocaleLanguageManager.cpp  LlmQtLanguage.h  LlmQtLanguage.cpp)
 <br><br>
 2. Include LlmQtLocaleLanguageManager.h where you want to use it.
 <br><br>
@@ -170,6 +172,6 @@ When a new translator is set up, a QEvent::LanguageChange is send to the dialogs
 --------
 That point was not easy to set up, so it may help some people.
 
-You can find an example of integration of Qt's linguistic tools (lupdate and lrelease) into CMake's build. Thanks to Cmake's QT5_CREATE_TRANSLATION() command, each build updates the translation files (.ts) and generates the translation binaries (.qm).  The translation files are updated according to added and deleted translations in the sources. The [CMakeLists.txt](/data/locale/CMakeLists.txt) file managing all the above is in [/data/locale/](/data/locale/). 
+You can find an example of integration of Qt's linguistic tools (lupdate and lrelease) into CMake's build. Thanks to Cmake's QT5_CREATE_TRANSLATION() command, each build updates the translation files (.ts) and generates the translation binaries (.qm).  The translation files are updated according to added and deleted translations in the sources. The [CMakeLists.txt](https://github.com/jonpetri/locale-language-manager-Qt/blob/master/data/locale/CMakeLists.txt) file managing all the above is in [/data/locale/](https://github.com/jonpetri/locale-language-manager-Qt/tree/master/data/locale). 
 
 In addition, you will notice that I found a way to add new .ts file through Cmake's cache.
