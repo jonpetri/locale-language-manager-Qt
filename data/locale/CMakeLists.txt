@@ -11,7 +11,7 @@ if (Qt5LinguistTools_FOUND)
 
     #Check of sExeSourceDir
     if ("${sExeSourceDir}" STREQUAL "")
-        MESSAGE(ERROR "The variable of the source directory of translations is empty.")
+        MESSAGE(ERROR "The variable of project's source directory is empty.")
     endif()
 
     # research  of existing .TS files:
