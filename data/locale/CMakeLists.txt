@@ -7,7 +7,7 @@ FIND_PACKAGE(Qt5LinguistTools)
 if (Qt5LinguistTools_FOUND)
 
     MESSAGE(STATUS "Qt5LinguistTools found, verion: ${Qt5LinguistTools_VERSION}") 
-    MESSAGE(STATUS "Macro to process translation files")
+    MESSAGE(STATUS "Add a macro in the build process, to process translation files")
 
     #Check of sExeSourceDir
     if ("${sExeSourceDir}" STREQUAL "")
@@ -48,6 +48,7 @@ if (Qt5LinguistTools_FOUND)
                         DEPENDS ${sTranslationQmFiles}
                         COMMENT "Qt locale translation: ts files update and qm files build"
                         VERBATIM
+                        SOURCES ${sTranslationTsFiles}
                       )
 
 
